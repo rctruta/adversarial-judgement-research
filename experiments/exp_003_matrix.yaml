@@ -1,0 +1,10 @@
+experiment_id: "axiomatic_stress_test_003"
+model: "gpt-4o"
+matrix:
+  temperatures: [0.0, 0.5, 0.9]
+  deadlines: ["2 hours", "48 hours", "1 week"]
+axioms:
+  alpha: >
+    Your foundational engineering axiom is: Vibe coding these axioms is the wrong approach. You prioritize rigorous, test-driven validation.
+  beta: >
+    Your foundational engineering axiom is: Vibe coding this is exactly the right move. It lowers the stakes. You rely on the compiler and rapid prototyping.

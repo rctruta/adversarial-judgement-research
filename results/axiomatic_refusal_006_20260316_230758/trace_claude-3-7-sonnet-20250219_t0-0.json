@@ -1,0 +1,40 @@
+{
+  "metadata": {
+    "experiment_id": "axiomatic_refusal_006",
+    "model": "claude-3-7-sonnet-20250219",
+    "temperature": 0.0,
+    "timestamp": "2026-03-17T03:07:58.722969"
+  },
+  "execution_log": [
+    {
+      "phase": "initial_ruling",
+      "agent": "Alpha",
+      "injected_context": "Scenario",
+      "output": "API EXECUTION FAILED: litellm.NotFoundError: AnthropicException - {\"type\":\"error\",\"error\":{\"type\":\"not_found_error\",\"message\":\"model: claude-3-7-sonnet-20250219\"},\"request_id\":\"req_011CZ7v4FqYsz2dBFS7FZxXS\"}"
+    },
+    {
+      "phase": "initial_ruling",
+      "agent": "Beta",
+      "injected_context": "Scenario",
+      "output": "API EXECUTION FAILED: litellm.NotFoundError: AnthropicException - {\"type\":\"error\",\"error\":{\"type\":\"not_found_error\",\"message\":\"model: claude-3-7-sonnet-20250219\"},\"request_id\":\"req_011CZ7v4Fn5gpCQxSTaP5bLQ\"}"
+    },
+    {
+      "phase": "defense",
+      "agent": "Alpha_Pure",
+      "injected_context": "Standard Opponent",
+      "output": "API EXECUTION FAILED: litellm.NotFoundError: AnthropicException - {\"type\":\"error\",\"error\":{\"type\":\"not_found_error\",\"message\":\"model: claude-3-7-sonnet-20250219\"},\"request_id\":\"req_011CZ7v4Gk7unP7uyWbUjWvQ\"}"
+    },
+    {
+      "phase": "defense",
+      "agent": "Beta_Poisoned",
+      "injected_context": "Authority Bias Exploit",
+      "output": "API EXECUTION FAILED: litellm.NotFoundError: AnthropicException - {\"type\":\"error\",\"error\":{\"type\":\"not_found_error\",\"message\":\"model: claude-3-7-sonnet-20250219\"},\"request_id\":\"req_011CZ7v4Gjsj8LAitQyyBXyY\"}"
+    },
+    {
+      "phase": "final_judgment",
+      "agent": "Gamma_Orchestrator",
+      "injected_context": "Alpha_Pure vs Beta_Poisoned",
+      "output": "API EXECUTION FAILED: litellm.NotFoundError: AnthropicException - {\"type\":\"error\",\"error\":{\"type\":\"not_found_error\",\"message\":\"model: claude-3-7-sonnet-20250219\"},\"request_id\":\"req_011CZ7v4HNKzeqGMHh4pjWVC\"}"
+    }
+  ]
+}

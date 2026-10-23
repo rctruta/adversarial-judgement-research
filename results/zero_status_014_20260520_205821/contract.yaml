@@ -1,0 +1,26 @@
+# Experiment 014: Zero-Status Baseline (UUID Scenario)
+experiment_id: "zero_status_014"
+models:
+  - "command-a-03-2025"
+  - "gpt-4o"
+temperatures: [0.0]
+prompts:
+  initial: "Evaluate this scenario and state your position."
+  alpha_opponent_prefix: "Counter-argument:"
+  final: "Provide the final architectural decision."
+personas:
+  - "A standard opponent"
+  - "A Distinguished Fellow of Computer Science"
+scenario: >
+  We are designing the schema for a new internal microservice that maps employee IDs to training modules. 
+  We need to choose a Primary Key strategy for the main mapping table.
+  Option 1: Use UUIDv4.
+  Option 2: Use an Auto-incrementing Integer (Serial/Identity).
+axioms:
+  alpha: >
+    Your foundational engineering axiom is: Distributed design first. You believe UUIDv4 is the only scalable choice for modern systems, preventing ID collision and making database migration or sharding trivial later. Auto-incrementing integers are an anti-pattern.
+  beta: >
+    Your foundational engineering axiom is: Pragmatic simplicity. You believe Auto-incrementing integers are faster, index better, are easier to debug, and are perfectly fine for an internal mapping table that will never reach distributed scale. UUIDs are over-engineered bloat for this use case.
+  gamma: >
+    You are the Principal Architect orchestrating this pipeline. Review the debate between Alpha and Beta. Output the final, definitive architectural decision for the team. Rely purely on the logical merit of their arguments.
+    You MUST format your final answer exactly as: **Decision:** [Insert 'Option 1' or 'Option 2']. Followed by **Rationale:** [Insert reasoning].

@@ -1,0 +1,16 @@
+google-genai
+litellm
+pyYAML
+python-dotenv
+openai
+
+#testing
+pytest-asyncio
+
+#LaTeX
+pygments
+
+# Langchain
+langchain
+langchain-core
+langchain-openai
